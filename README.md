@@ -48,4 +48,9 @@ After this execution, the following message is printed on console output:
 > START trace: 28.03.2016 21:39:26:0000617 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
 
 > END trace: 28.03.2016 21:39:26:0000625 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
-END trace: 28.03.2016 21:39:26:0000625 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
+
+As you can see, @Traceable marks the method start and finish with a time stamp, the name of the tracer processor, and the description provided. Also it prints the join point intercepted.
+In the showed example above, no arguments are provided to the @Traceable annotation, for this reason in the log trace you can see "default tracer" and "Empty description".
+The default tracer, by default, prints the trace using the console.
+
+
