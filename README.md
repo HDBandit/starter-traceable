@@ -104,3 +104,39 @@ public class MyCustomTracer implements Tracer {
 
 }
 ```
+
+# Maven configuration required to use tracer
+
+Add the following lines to your settings.xml:
+
+```
+<profiles>
+	<profile>
+		<repositories>
+			<repository>
+				<snapshots>
+				<enabled>false</enabled>
+				</snapshots>
+				<id>bintray-hdbandit-maven</id>
+				<name>bintray</name>
+				<url>http://dl.bintray.com/hdbandit/maven</url>
+			</repository>
+		</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+			<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-hdbandit-maven</id>
+			<name>bintray-plugins</name>
+			<url>http://dl.bintray.com/hdbandit/maven</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<id>bintray</id>
+	</profile>
+</profiles>
+
+<activeProfiles>
+	<activeProfile>bintray</activeProfile>
+</activeProfiles>
+```
