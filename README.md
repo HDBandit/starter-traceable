@@ -96,7 +96,10 @@ public class MyCustomTracer implements Tracer {
 
     @Override
     public void trace(String message) {
-        // You log the information provided using log4j, slf4j, save into database or whatever you want. 
+        // Here you can log the information provided using log4j, slf4j...
+        // You can save the register into database
+        // You can parse the trace to process the information...
+        // Or whatever you want
     }
 
 }
