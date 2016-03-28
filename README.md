@@ -73,3 +73,31 @@ Then the output will be:
 
 > END trace: 28.03.2016 21:39:26:12 :: Tracer: default tracer, Description: Processing client orders , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
 
+# Configuring custom tracers
+
+Like I said before by default, the default tracer prints all by console, but you can configure your own tracer processors. Let's to see how with an example:
+
+```java
+@Component
+public class MyBean {
+   
+   @Traceable(description = "My custom description", tracerQualifier = "Custom Tracer")
+   public void process1() {
+       // process 1
+   }
+}
+```
+
+After that, we must to create our tracer bean with the id name 'Custom Tracer'.
+
+```java
+@Component("Custom Tracer")
+public class MyCustomTracer implements Tracer {
+
+    @Override
+    public void trace(String message) {
+        // You log the information provided using log4j, slf4j, save into database or whatever you want. 
+    }
+
+}
+```
