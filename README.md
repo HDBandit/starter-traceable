@@ -53,4 +53,23 @@ As you can see, @Traceable marks the method start and finish with a time stamp, 
 In the showed example above, no arguments are provided to the @Traceable annotation, for this reason in the log trace you can see "default tracer" and "Empty description".
 The default tracer, by default, prints the trace using the console.
 
+In the next example you can see a more advanced configuration, providing a description and time stamp format:
+
+```java
+@Component
+public class MyBean {
+
+   @Traceable(dateFormat = "dd/MM/yyyy HH:mm:ss", description = "Processing client orders")
+   public void process1() {
+       // process 1
+   }
+   
+}
+```
+
+Then the output will be:
+
+> START trace: 28.03.2016 21:39:26:12 :: Tracer: default tracer, Description: Processing client orders , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
+
+> END trace: 28.03.2016 21:39:26:12 :: Tracer: default tracer, Description: Processing client orders , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
 
