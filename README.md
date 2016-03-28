@@ -45,7 +45,7 @@ public class MyApplication {
 ```
 After this execution, the following message is printed on console output:
 
-> START trace: 28.03.2016 21:39:26:0000617 :: <Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())>
+> START trace: 28.03.2016 21:39:26:0000617 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
 
-> END trace: 28.03.2016 21:39:26:0000625 :: <Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())>
-END trace: 28.03.2016 21:39:26:0000625 :: <Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())>
+> END trace: 28.03.2016 21:39:26:0000625 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
+END trace: 28.03.2016 21:39:26:0000625 :: Tracer: default tracer, Description: Empty description , JoinPoint: execution(void com.hdbandit.example_traceable.MyBean.process1())
