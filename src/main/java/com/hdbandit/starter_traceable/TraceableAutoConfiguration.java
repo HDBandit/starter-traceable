@@ -1,6 +1,5 @@
 package com.hdbandit.starter_traceable;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -12,8 +11,7 @@ import com.hdbandit.traceable.config.TraceableConfig;
 @Import(TraceableConfig.class)
 public class TraceableAutoConfiguration {
 
-    @Bean
-    @ConditionalOnMissingBean
+    @Bean(name = "default tracer")
     public Tracer defaultTracer() {
         return new Tracer() {         
             public void trace(String message) {
