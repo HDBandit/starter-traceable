@@ -122,21 +122,31 @@ Add the following lines to your settings.xml:
 				<url>http://dl.bintray.com/hdbandit/maven</url>
 			</repository>
 		</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<snapshots>
-			<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-hdbandit-maven</id>
-			<name>bintray-plugins</name>
-			<url>http://dl.bintray.com/hdbandit/maven</url>
-		</pluginRepository>
-	</pluginRepositories>
-	<id>bintray</id>
+		<pluginRepositories>
+			<pluginRepository>
+				<snapshots>
+				<enabled>false</enabled>
+				</snapshots>
+				<id>bintray-hdbandit-maven</id>
+				<name>bintray-plugins</name>
+				<url>http://dl.bintray.com/hdbandit/maven</url>
+			</pluginRepository>
+		</pluginRepositories>
+		<id>bintray</id>
 	</profile>
 </profiles>
 
 <activeProfiles>
 	<activeProfile>bintray</activeProfile>
 </activeProfiles>
+```
+
+And finally add the dependency to your pom file:
+
+```
+<dependency>
+	<groupId>com.hdbandit</groupId>
+	<artifactId>starter-traceable</artifactId>
+	<version>1.0.0</version>
+</dependency>
 ```
